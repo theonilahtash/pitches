@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container-fluid">
-    <h1 class="text-center">Welcome to One minute pitch website</h1>
+    <h1 class="text-center">Welcome to the best pitch website</h1>
     <p>Click
-        <a href="{{ url_for('auth.register') }}">here</a> to sign up to make a pitch. </p>
-    <p>If already signed up click
-        <a href="{{ url_for('auth.login') }}">here</a> to log in.</p>
-    <p>Click
-        <a href="{{ url_for('main.new_pitch') }}"> here </a>to create a pitch or view existing Pitches.</p>
+        <a href="{{ url_for('auth.register') }}">Click</a> to sign up to make a pitch. </p>
+    <p>If signed up 
+        <a href="{{ url_for('auth.login') }}">Click</a> to sign in.</p>
+    <p>Or
+        <a href="{{ url_for('main.new_pitch') }}"> Click </a>to create a pitch or view Pitches.</p>
 </div>
 {% endblock %}
