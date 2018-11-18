@@ -1,0 +1,50 @@
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/"> Home </a>
+                </li>
+                <li>
+                    <a href="/"> About </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>General</a>
+                        </li>
+                        <li>Career</a>
+                        </li>
+                        <li>Business</a>
+                        </li>
+                        <li>Technology</a>
+                        </li>
+                        <li>Science</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if current_user.is_authenticated %}
+                <li>
+                    <a class="nav-item nav-link" href="{{ url_for('main.new_pitch') }}">New Pitch</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+                </li>
+                {% else %}
+                <li>
+                    <a class="nav-item nav-link" href="{{ url_for('auth.login') }}">
+                        <span class="glyphicon glyphicon-log-in"></span>Login</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="{{ url_for('auth.register') }}">
+                        <span class="glyphicon glyphicon-user"></span>Sign Up</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
