@@ -36,7 +36,7 @@ def new_comment():
         comment = Comment(comment=comment_form.comment.data)
         db.session.add(comment)
         db.session.commit()
-        flash('Your comment has been posted succesfully')
+        flash('Your comment has been succesfully posted')
         return redirect(url_for('main.new_comment'))
     comments = Comment.query.all()
     return render_template('form.html', comment_form=comment_form, comment_list=comments)
