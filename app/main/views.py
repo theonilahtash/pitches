@@ -21,7 +21,7 @@ def new_pitch():
         pitch = Pitch(title = form.title.data, body = form.body.data)
         db.session.add(pitch)
         db.session.commit()
-        flash('Your pitch has been created succesfully')
+        flash('Your pitch has been succesfully created')
         return redirect(url_for('main.new_pitch'))
     title = "Create a Pitch"
     pitches = Pitch.query.all()
