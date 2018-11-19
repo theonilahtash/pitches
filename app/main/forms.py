@@ -5,8 +5,8 @@ from wtforms.validators import DataRequired
 
 
 class PitchForm(FlaskForm):
-    title = StringField('Pitch Category Title', validators=[DataRequired()])
-    body = TextAreaField('Enter your Pitch', validators=[DataRequired()])
+    title = StringField('Category Pitch', validators=[DataRequired()])
+    body = TextAreaField('Add your Pitch', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 class CommentForm(FlaskForm):
