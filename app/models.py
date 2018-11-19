@@ -60,7 +60,7 @@ class Pitch(db.Model):
     category_id = db.Column(db.Integer, db.ForeignKey("categories.id"))
 
     # Defining a one to many relationship between a pitch and a comment
-    comments = db.relationship('Comment', backref="main_pitch", cascade="all, delete-orphan" , lazy="dynamic")
+    comments = db.relationship('Comment', backref="main_pitch", lazy="dynamic")
 
     def __repr__(self):
         return f'Pitch {self.title}'
