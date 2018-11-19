@@ -1,8 +1,8 @@
 {% extends 'base.html' %} {% import 'bootstrap/wtf.html' as wtf%} {% import 'macros.html' as macro %} {% block navbar %}
 {% include 'navbar.html'%} {% endblock %} {% block content %}
 
-<div class="container-fluid">
-    <h1 class="text-center">Write a pitch in the form below.</h1>
+<div class="container-fluid" style="background-color:grey">
+    <h1 class="text-center" style="color: white">Write a pitch in the form below.</h1>
     <div class="content-section">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
