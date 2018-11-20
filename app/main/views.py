@@ -40,3 +40,10 @@ def new_comment():
         return redirect(url_for('main.new_comment'))
     comments = Comment.query.all()
     return render_template('form.html', comment_form=comment_form, comment_list=comments)
+
+    # @main.route('/product')
+    # def product():
+    #     '''
+    #     view the page function that return our product
+    #     '''
+    #     return render_template('product.html')
